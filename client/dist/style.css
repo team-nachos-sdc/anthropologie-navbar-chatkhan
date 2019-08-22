@@ -1,0 +1,59 @@
+/* body {
+  font: 1.3rem/1 "Avenir LT W02 45 Book",sans-serif;
+  color: #5c5c5f;
+  background: #fdfdf9;
+} */
+/**** PromoHeader ****/
+.promo-pre-title {
+  vertical-align: middle;
+  font: italic 0.9rem/2 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .12rem;
+  text-decoration: none;
+  padding: 0 17.5px;
+
+}
+.promo-container {
+  background-color: #f17960;
+  text-align: center;
+  margin: 0;
+  padding-top: 0;
+  border: 0;
+}
+.promo-title {
+  /* display: block; */
+  vertical-align: middle;
+  font: 1.3rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .12rem;
+  padding: 0 17.5px;
+  
+}
+.promo-links {
+  padding: 0 17.5px;
+  
+}
+
+.promo-link {
+  letter-spacing: .06rem;
+  text-decoration: underline;
+  padding: 0 17.5px;
+  vertical-align: middle;
+  font: 0.9rem/2 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .12rem;
+  color: inherit;
+  line-height: 24px;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+.promo-link:hover { 
+  color: #C00F16;
+  cursor: pointer;
+  text-decoration: none;
+}
+.promo-banner {
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  padding: 10px 0;
+}
