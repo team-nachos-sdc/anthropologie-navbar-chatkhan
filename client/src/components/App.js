@@ -16,9 +16,10 @@ export default class App extends Component {
       <div id="body">
         <PromoHeader />
         <SiteHeader />
+        <br></br>
         <MainNavigation />
-        
-  </div>
+
+      </div>
     )
   }
 }

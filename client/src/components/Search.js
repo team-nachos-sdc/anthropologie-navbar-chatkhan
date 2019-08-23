@@ -14,18 +14,16 @@ export default class Search extends Component {
   }
 
   mouseOut() {
-    console.log("Mouse out!!!");
     this.setState({ moused: false });
   }
 
   mouseOver() {
-    console.log("Mouse over!!!");
     this.setState({ moused: true });
   }
 
   render() {
     return (
-      <div className="search-container">
+      <span className="search-container">
         <span onMouseOut={this.mouseOut} onMouseOver={this.mouseOver}>
           {this.state.moused ? <img src={'./HoverSearch.png'}></img> : <img src={'./Search.png'}></img>}
         </span>
@@ -34,7 +32,7 @@ export default class Search extends Component {
             <input type="text" placeholder="search" className="search"></input>
           </form>
         </span>
-      </div>
+      </span>
     )
   }
 }

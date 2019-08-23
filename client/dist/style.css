@@ -68,7 +68,6 @@ body {
 #brand {
   top: 8px;
   align-content: center;
-  font: 1.3rem/1 "Avenir LT W02 45 Book",sans-serif;
 }
 
 #right-header {
@@ -83,7 +82,7 @@ width: 25%;
 
 .header-link {
   text-decoration: none;
-  padding: 0 13.5px;
+  padding: 0 7px;
   vertical-align: middle;
   font: 0.7rem/1 "Avenir LT W02 65 Medium",sans-serif;
   letter-spacing: .10rem;
@@ -91,9 +90,21 @@ width: 25%;
 }
 
 .header-link:hover { 
-  color: #006666;
+  color: #167a92;
   cursor: pointer;
   text-decoration: none;
+}
+
+.dropdownTriangle {
+  padding-top: 4px;
+  vertical-align: baseline;
+
+}
+
+.shoppingBag {
+  padding-top: 4px;
+  vertical-align: baseline;
+
 }
 
 /**** Search ****/
@@ -104,6 +115,7 @@ width: 25%;
   padding-top: 8px;
   padding-right: 10px;
 }
+
 .search {
   border: none;
   border-bottom: 1px solid #c9c0b5;
@@ -130,4 +142,173 @@ input {
   text-align: start;
   -webkit-rtl-ordering: logical;
   cursor: text;
+}
+
+/**** MainNavigation ****/
+
+.main-container {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  align-items: center;
+
+}
+
+/* .category {
+  text-decoration: none;
+  color: #26262c;
+  font: 0.9rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  padding: 0 15px 10px;
+  /* display: block; */
+  /* vertical-align: baseline;
+  cursor: pointer;
+  text-align: center;
+
+} */ 
+/* * {
+  box-sizing: border-box;
+} */
+
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul li {
+  display: inline;
+  text-align: center;
+}
+
+.category {
+  text-decoration: none;
+  color: #26262c;
+  font: 0.8rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  padding: 0 15px 10px;
+  vertical-align: baseline;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;=
+  margin: 0;
+}
+
+.two:hover ~ hr {
+  margin-left: 7.5%;
+}
+
+.three:hover ~ hr {
+  margin-left: 50%;
+}
+
+.four:hover ~ hr {
+  margin-left: 75%;
+}
+.five:hover ~ hr {
+  margin-left: 7.5%;
+}
+
+.six:hover ~ hr {
+  margin-left: 50%;
+}
+
+.seven:hover ~ hr {
+  margin-left: 75%;
+}
+.eight:hover ~ hr {
+  margin-left: 7.5%;
+}
+
+.nine:hover ~ hr {
+  margin-left: 50%;
+}
+
+.ten:hover ~ hr {
+  margin-left: 75%;
+}
+
+.eleven:hover ~ hr {
+  margin-left: 50%;
+}
+
+.tweleve:hover ~ hr {
+  margin-left: 75%;
+}
+
+hr {
+  height: .07rem;
+  width: 2%;
+  margin: 0;
+  background: #167a92;
+  border: none;
+  transition: .3s ease-in-out;
+}
+
+/**** Categories ****/
+
+.dropdown-one {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-one .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: #25262c;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* .main-container .category-link:hover, .dropdown-one:hover .dropbtn {
+  background-color: transparent;
+} */
+
+.dropdown-content-one {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.dropdown-content-one .category-link {
+  float: none;
+  text-decoration: none;
+  text-align: left;
+  padding: 0 7px;
+  vertical-align: middle;
+  font: 0.7rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .10rem;
+  color: #25262c;
+}
+
+.dropdown-content-one a:hover {
+  background-color: #ddd;
+
+}
+
+.dropdown-one:hover .dropdown-content-one {
+  display: block;
+}
+
+.category-link:hover { 
+  color: #167a92;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }

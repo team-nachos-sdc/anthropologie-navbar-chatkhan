@@ -18,21 +18,17 @@ export default class SiteHeader extends Component {
   }
 
   mouseOutDropdown() {
-    console.log("Mouse out!!!");
     this.setState({ dropMoused: false });
   }
 
   mouseOverDropdown() {
-    console.log("Mouse over!!!");
     this.setState({ dropMoused: true });
   }
   mouseOutBag() {
-    console.log("Mouse out!!!");
     this.setState({ bagMoused: false });
   }
 
   mouseOverBag() {
-    console.log("Mouse over!!!");
     this.setState({ bagMoused: true });
   }
 
@@ -40,7 +36,7 @@ export default class SiteHeader extends Component {
     return (
       <div className="header-container">
         <Search />
-        <img src={"./brand.png"} />
+        <img id="brand" src={"./brand.png"} />
         <div id="right-header">
           <a href="#" className="header-link">registry</a>
           <a href="#" className="header-link">usd: english</a>
@@ -49,12 +45,12 @@ export default class SiteHeader extends Component {
     <a href="#">Link 2</a>
     <a href="#">Link 3</a>
   </div> */}
-          <span id="dropdownTriangle" onMouseOut={this.mouseOutDropdown} onMouseOver={this.mouseOverDropdown}>
-            {this.state.dropMoused ? <img src={'./Triangle.png'}></img> : <img src={'./DownTriangle.png'}></img>}
+          <span onMouseOut={this.mouseOutDropdown} onMouseOver={this.mouseOverDropdown}>
+            {this.state.dropMoused ? <img class="dropdownTriangle" src={'./Triangle.png'}></img> : <img class="dropdownTriangle" src={'./DownTriangle.png'}></img>}
           </span>
           <a href="#" className="header-link">sign in / sign up </a>
-          <span id="shoppingBag" onMouseOut={this.mouseOutBag} onMouseOver={this.mouseOverBag}>
-            {this.state.bagMoused ? <img src={'./HoverBag.png'}></img> : <img src={'./Bag.png'}></img>}
+          <span onMouseOut={this.mouseOutBag} onMouseOver={this.mouseOverBag}>
+            {this.state.bagMoused ? <img class="shoppingBag" src={'./HoverBag.png'}></img> : <img class="shoppingBag" src={'./Bag.png'}></img>}
           </span>
         </div>
       </div>
