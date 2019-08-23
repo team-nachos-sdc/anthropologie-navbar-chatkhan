@@ -1,12 +1,12 @@
-/* body {
+body {
   font: 1.3rem/1 "Avenir LT W02 45 Book",sans-serif;
   color: #5c5c5f;
   background: #fdfdf9;
-} */
+}
 /**** PromoHeader ****/
 .promo-pre-title {
   vertical-align: middle;
-  font: italic 0.9rem/2 "Avenir LT W02 65 Medium",sans-serif;
+  font: italic 0.8rem/2 "Avenir LT W02 65 Medium",sans-serif;
   letter-spacing: .12rem;
   text-decoration: none;
   padding: 0 17.5px;
@@ -22,7 +22,7 @@
 .promo-title {
   /* display: block; */
   vertical-align: middle;
-  font: 1.3rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
+  font: 1.0rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
   letter-spacing: .12rem;
   padding: 0 17.5px;
   
@@ -37,7 +37,7 @@
   text-decoration: underline;
   padding: 0 17.5px;
   vertical-align: middle;
-  font: 0.9rem/2 "Avenir LT W02 65 Medium",sans-serif;
+  font: 0.7rem/2 "Avenir LT W02 65 Medium",sans-serif;
   letter-spacing: .12rem;
   color: inherit;
   line-height: 24px;
@@ -56,4 +56,78 @@
   color: #fff;
   align-items: center;
   padding: 10px 0;
+}
+
+.header-container {
+  max-width: 1441px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 14px;
+}
+/**** SiteHeader ****/
+#brand {
+  top: 8px;
+  align-content: center;
+  font: 1.3rem/1 "Avenir LT W02 45 Book",sans-serif;
+}
+
+#right-header {
+width: 25%;
+  float: right;
+  padding-left: 10px;
+  margin: 0;
+  padding-top: 10px;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.header-link {
+  text-decoration: none;
+  padding: 0 13.5px;
+  vertical-align: middle;
+  font: 0.7rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .10rem;
+  color: #25262c;
+}
+
+.header-link:hover { 
+  color: #006666;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/**** Search ****/
+.search-container {
+  width: 33.33333%;
+  float: left;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-right: 10px;
+}
+.search {
+  border: none;
+  border-bottom: 1px solid #c9c0b5;
+  margin-left: 60px;
+  padding: 7px 30px 0 0;
+  font: 0.8rem/1.6 "Avenir LT W02 65 Medium",sans-serif;
+  color: #167a92;
+  background-color: #fdfdf9;
+  letter-spacing: .06rem;
+  vertical-align: middle;
+  transition: width .2s ease-in-out;
+}
+
+input {
+    /* color: #167a92; */
+  /* -webkit-writing-mode: horizontal-tb !important; */
+  text-rendering: auto;
+  color: #167a92;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
 }
