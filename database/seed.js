@@ -1,6 +1,6 @@
 const Product = require('./index.js');
 
-const colors = ['Coral', 'Salt', 'Forest', 'Citron', 'Chiffon', 'Bone', 'Blush', 'Porcelain', 'Mustard', 'Egg Shell', 'Lace', 'Pearl', 'Canary', 'Daffofil', 'Honey', 'Marigold', 'Honey', 'Currant']
+const colors = ['White', 'Coral', 'Salt', 'Forest', 'Citron', 'Chiffon', 'Bone', 'Blush', 'Porcelain', 'Mustard', 'Egg Shell', 'Lace', 'Pearl', 'Canary', 'Daffofil', 'Honey', 'Marigold', 'Honey', 'Currant']
 const names = ['Robin', 'Brigitte', 'Massima', 'Saiorse', 'Astrid', 'Leslie', 'Gisella', 'Vega', 'Anastasia', 'Finley', 'Marnita', 'Faithfull', 'Diane', 'Rossi', 'Roxie', 'Boswell', 'Katrina', 'Kantha', 'Sophie', 'Makura', 'Helena', 'Adelina', 'Rivulets', 'Dahlia', 'Coren', 'Joanna', 'Edna', 'Majorelle', 'Tasmin', 'Martina', 'Vineet Bahl', 'Meguro']
 
 const image = 'https://s7d5.scene7.com/is/image/Anthropologie/45405720AA_074_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain'

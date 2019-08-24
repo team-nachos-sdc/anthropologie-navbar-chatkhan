@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SearchResults from './SearchResults.js';
 
+const suggestions = ["shirt", "shoes", "short", "skirt", "set", "silk", "scarf", "skinny", "maxi skirt", "midi skirt", "skinny jeans", "shawl", "shoulder top", "shoulder", "printed skirt", "pencil skirt", "womens", "wall", "wall art", "watch", "wool", "white shirt", "white blouse", "shirt white", "white duvet"]
+
 export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
       query: '',
       moused: false,
-      searchClicked: false
+      searchClicked: false,
+      results: [],
+      suggestionOptions: []
     }
     this.mouseOut = this.mouseOut.bind(this);
     this.mouseOver = this.mouseOver.bind(this);
@@ -16,6 +20,8 @@ export default class Search extends Component {
     this.setWrapperRef = this.setWrapperRef.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleClickInside = this.handleClickInside.bind(this);
+    this.getResults = this.getResults.bind(this);
+    this.suggestionChange = this.suggestionChange.bind(this);
   }
 
   componentDidMount() {
@@ -49,22 +55,59 @@ export default class Search extends Component {
   }
 
   handleChange(event) {
-    this.setState({ query: event.target.value }, () => console.log(this.state));
+    this.setState({ query: event.target.value }, () => this.getResults());
+  }
+
+  getResults() {
+    axios.get('/search')
+      .then(response => {
+        console.log("response", response)
+        let arr = [];
+        for (var i = 0; i < response.data.length; i++) {
+          if (response.data[i].title.includes(this.state.query) || response.data[i].color.includes(this.state.query)) {
+            arr.push(response.data[i])
+          }
+        }
+        arr = arr.slice(0, 3)
+        this.setState({ results: arr }, () => this.suggestionChange())
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
+  suggestionChange() {
+    let arr = [];
+    for (var i = 0; i < suggestions.length; i++) {
+      if (!suggestions[i].includes(' ')) {
+        if (suggestions[i].slice(0, this.state.query.length) === this.state.query) {
+          arr.push(suggestions[i])
+        }
+      } else {
+        if (suggestions[i].includes(this.state.query)) {
+          arr.push(suggestions[i])
+        }
+      }
+    }
+    arr = arr.slice(0, 5)
+    this.setState({ suggestionOptions: arr }, () => {
+      console.log(this.state)
+    })
   }
 
   render() {
     return (
       <span className="search-container" >
         <span>
-          <form action="/action_page.php" onKeyPress={this.getResults}>
+          <form action="/action_page.php" >
             <div className="search-wrapper">
               <span onMouseOut={this.mouseOut} onMouseOver={this.mouseOver}>
                 {this.state.moused ? <img src={'./HoverSearch.png'}></img> : <img src={'./Search.png'}></img>}
               </span>
-              <input ref={this.setWrapperRef} onChange={this.handleChange} onClick={this.handleClickInside} type="text" placeholder="search" className="search" ></input>
+              <input ref={this.setWrapperRef} onKeyUp={this.handleChange} onClick={this.handleClickInside} type="text" placeholder="search" className="search" ></input>
             </div>
           </form>
-          <SearchResults searchClicked={this.state.searchClicked} query={this.state.query} />
+          <SearchResults searchClicked={this.state.searchClicked} query={this.state.query} results={this.state.results} suggestionOptions={this.state.suggestionOptions} />
         </span>
       </span>
     )
