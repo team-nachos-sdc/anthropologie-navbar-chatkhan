@@ -11,46 +11,43 @@ const MainNavigation = (props) => {
         <ul>
           <span className="dropdown-one">
             <li className="one"><a className="category" href="#">New!</a></li>
-            <div className="super-content">
             <div className="dropdown-content-one">
               <div className="column" >
-                <a href="#" className="category-link">All Clothing</a>
-                <a href="#" className="category-link">Dresses</a>
-                <a href="#" className="category-link">Tops</a>
-                <a href="#" className="category-link">Pants</a>
-                <a href="#" className="category-link">Shoes & Accessories</a>
+                <p className="category-link">All Clothing</p>
+                <p className="category-link">Dresses</p>
+                <p className="category-link">Tops</p>
+                <p className="category-link">Pants</p>
+                <p className="category-link">Shoes & Accessories</p>
               </div>
-              <div href="#" className="column" >
-                <a href="#" className="category-link">All Home & Furniture</a>
-                <a href="#" className="category-link">Furniture</a>
-                <a href="#" className="category-link">Bedding, Pillows, & Throws</a>
-                <a href="#" className="category-link">Kitchen & Dining</a>
+              <div className="column" >
+                <p className="category-link">All Home & Furniture</p>
+                <p className="category-link">Furniture</p>
+                <p className="category-link">Bedding, Pillows, & Throws</p>
+                <p className="category-link">Kitchen & Dining</p>
               </div>
-              <div href="#" className="column" >
-                <a href="#" className="category-link">Room Décor</a>
-                <a href="#" className="category-link">Plus</a>
-                <a href="#" className="category-link">Beauty & Wellness</a>
-                <a href="#" className="category-link">Kids & Babies</a>
+              <div className="column" >
+                <p className="category-link">Room Décor</p>
+                <p className="category-link">Plus</p>
+                <p className="category-link">Beauty & Wellness</p>
+                <p className="category-link">Kids & Babies</p>
               </div>
               <div className="column" >
                 <img className="nav-img" src={'./Sale.jpg'}></img>
               </div>
-              </div>
             </div>
           </span>
 
-          <span className="dropdown-two">
-            <li className="two"><a className="category" href="#">Dresses</a></li>
-          </span>
 
-          <span className="dropdown-three">
-            <li className="three"><a className="category" href="#">Clothing</a></li>
+          <li className="two"><a className="category" href="#">Dresses</a></li>
 
-          </span>
 
-          <span className="dropdown-four">
+
+          <li className="three"><a className="category" href="#">Clothing</a></li>
+
+
+
           <li className="four"><a className="category" href="#">Plus</a></li>
-          </span>
+
 
 
           <li className="five"><a className="category" href="#">Shoes</a></li>
