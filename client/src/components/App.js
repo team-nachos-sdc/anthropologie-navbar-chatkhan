@@ -13,12 +13,19 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div id="body">
-        <PromoHeader />
-        <SiteHeader />
-        <br></br>
-        <MainNavigation />
-
+      <div>
+        <div id="body">
+          <PromoHeader />
+          <div id="full-topbar">
+          <SiteHeader />
+          <br></br>
+          <MainNavigation />
+</div>
+          <br></br>
+        </div>
+        <div>
+          {/* <img src={'./HoverSearch.png'}> </img> */}
+        </div>
       </div>
     )
   }

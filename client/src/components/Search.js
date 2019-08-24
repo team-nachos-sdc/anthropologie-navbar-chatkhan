@@ -6,7 +6,8 @@ export default class Search extends Component {
     super(props);
     this.state = {
       query: '',
-      moused: false
+      moused: false,
+      suggestions: []
     }
     this.mouseOut = this.mouseOut.bind(this);
     this.mouseOver = this.mouseOver.bind(this);
@@ -24,12 +25,14 @@ export default class Search extends Component {
   render() {
     return (
       <span className="search-container">
-        <span onMouseOut={this.mouseOut} onMouseOver={this.mouseOver}>
-          {this.state.moused ? <img src={'./HoverSearch.png'}></img> : <img src={'./Search.png'}></img>}
-        </span>
         <span>
           <form action="/action_page.php">
-            <input type="text" placeholder="search" className="search"></input>
+          <div class="search-wrapper">
+              <span onMouseOut={this.mouseOut} onMouseOver={this.mouseOver}>
+                {this.state.moused ? <img src={'./HoverSearch.png'}></img> : <img src={'./Search.png'}></img>}
+              </span>
+              <input type="text" placeholder="search" className="search"></input>
+            </div>
           </form>
         </span>
       </span>
