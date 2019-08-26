@@ -1,3 +1,6 @@
+* {
+  position: static;
+}
 body {
   font: 1.3rem/1 "Avenir LT W02 45 Book",sans-serif;
   color: #5c5c5f;
@@ -69,19 +72,21 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-top: 14px;
+  position: static;
+  justify-content: space-around;
   
 }
 /**** SiteHeader ****/
 #brand {
   padding-top: 10px;
   align-content: center;
-  padding-left: 50px;
+  padding-left: 100px;
 }
 
 #right-header {
-width: 25%;
-  float: right;
-  padding-left: 10px;
+  width: 25%;
+  justify-content: flex-start;
+  padding-left: 270px;
   margin: 0;
   border: 0;
   vertical-align: baseline;
@@ -95,7 +100,9 @@ width: 25%;
   letter-spacing: .10rem;
   color: #25262c;
 }
-
+.full-topbar {
+  position: static; 
+}
 .header-link:hover { 
   color: #167a92;
   cursor: pointer;
@@ -118,7 +125,6 @@ width: 25%;
 .search-container {
   display: inline-block;
   width: 33.33333%;
-  float: left;
   padding-left: 10px;
   padding-top: 8px;
   padding-right: 10px;
@@ -131,10 +137,18 @@ width: 25%;
   padding: 7px 30px 0 0;
   font: 0.8rem/1.6 "Avenir LT W02 65 Medium",sans-serif;
   color: #167a92;
-  background-color: #fdfdf9;
+  background-color: #sha;
   letter-spacing: .06rem;
   vertical-align: middle;
   transition: width .2s ease-in-out;
+  width: 180px;
+  border: none;
+  border-bottom: 1px solid #c9c0b5;
+  /* margin-left: 20px; */
+  /* padding: 5px 30px 0 0; */
+}
+.search:focus {
+border-color: #059fb0;
 }
 .search-wrapper {
   position: relative;
@@ -182,7 +196,12 @@ ul li {
   text-align: center;
   display: inline-block;
   margin: 0;
+  position:static;
 }
+
+/* #one #two #three #four #five #six #seven #eight #nine #ten #eleven #twelve {
+  position: absolute;
+} */
 
 .two:hover ~ hr {
   margin-left: 7.5%;
@@ -236,6 +255,14 @@ hr {
 }
 
 /**** Categories ****/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 .nav-img {
   display: inline-block;
   /* max-width: 100%; */
@@ -245,87 +272,95 @@ hr {
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  padding-right: 15px;
+  padding-top: 25px;
 }
 
-.dropdown-one {
-  float: left;
-  cursor: pointer;
+.navbar {
   overflow: hidden;
-  margin-left: 100px;
-  align-items: center;
-}
-
-.dropdown-one .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: #25262c;
-  /* padding: 14px 16px; */
   background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  float: left;
-  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.dropdown-content-one {
+.navbar .category-link {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.category-link:hover {
+  color: #167a92;
+}
+
+.dropdown-content {
   display: none;
+  top: 180px;
   position: absolute;
-  background-color: #fff;
   width: 100%;
+  left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-  padding-left: 150px;
-  margin: 0 auto;
-  padding: 0;
-  margin-top: 10px;
 }
 
-.dropdown-content-one .category-link {
+.dropdown-content .header {
+  padding: 16px;
+  color: #fdfdf9;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column4 {
+  float: left;
+  width: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: inherit;
+  height: auto;
+}
+.column3 {
+  float: left;
+  width: 33.33333%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: inherit;
+  height: auto;
+}
+.category-container {
+  padding-left: 120px;
+  padding-right: 20px;
+  display: flex;
+  opacity: 70%;
+}
+.column .category-link  {
   float: none;
+  padding: 16px;
   text-decoration: none;
+  display: block;
   text-align: left;
-  padding: 0 7px;
-  vertical-align: middle;
   font: 0.7rem/1 "Avenir LT W02 65 Medium",sans-serif;
   letter-spacing: .10rem;
   color: #25262c;
 }
 
-.dropdown-content-one a:hover {
-  background-color: #fdfdf9;
-  opacity: 80%;
+.category-link:hover {
+  color: #167a92;
+  cursor: pointer;
 }
 
-.dropdown-one:hover .dropdown-content-one {
-  display: block;
-  position: relative;
-  z-index: 100;
-}
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-.category-link {
-  color: #167a92;
-  margin-bottom: 20px;
-  text-decoration: none;
-}
 
-.category-link:hover { 
-  color: #167a92;
-  cursor: pointer;
-  margin-bottom: 20px;
-  text-decoration: none;
-}
-
-.column {
-  float: left;
-  width: 12%;
-  padding: 60px;
-  /* padding-left: 50px; */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
 }

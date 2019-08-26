@@ -37,7 +37,7 @@ export default class SiteHeader extends Component {
       <div className="header-container">
         <Search />
         <img id="brand" src={"./brand.png"} />
-        <div id="right-header">
+        <span id="right-header">
           <a href="#" className="header-link">registry</a>
           <a href="#" className="header-link" onMouseOut={this.mouseOutDropdown} onMouseOver={this.mouseOverDropdown}>usd: english</a>
           {/* <div className="language-dropdown-content">
@@ -52,7 +52,7 @@ export default class SiteHeader extends Component {
           <span onMouseOut={this.mouseOutBag} onMouseOver={this.mouseOverBag}>
             {this.state.bagMoused ? <img className="shoppingBag" src={'./HoverBag.png'}></img> : <img className="shoppingBag" src={'./Bag.png'}></img>}
           </span>
-        </div>
+        </span>
       </div>
     )
   }

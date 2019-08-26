@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SearchResults from './SearchResults.js';
 
-const suggestions = ["shirt", "shoes", "short", "skirt", "set", "silk", "scarf", "skinny", "maxi skirt", "midi skirt", "skinny jeans", "shawl", "shoulder top", "shoulder", "printed skirt", "pencil skirt", "womens", "wall", "wall art", "watch", "wool", "white shirt", "white blouse", "shirt white", "white duvet"]
+const suggestions = ["shirt", "shoes", "skirt", "set", "silk", "scarf", "skinny", "maxi skirt", "midi skirt", "skinny jeans", "shawl", "shoulder top", "shoulder", "printed skirt", "pencil skirt", "womens", "wall", "wall art", "watch", "wool", "white shirt", "white blouse", "shirt white", "blouse white", "white duvet"]
 
 export default class Search extends Component {
   constructor(props) {
@@ -104,7 +104,7 @@ export default class Search extends Component {
               <span onMouseOut={this.mouseOut} onMouseOver={this.mouseOver}>
                 {this.state.moused ? <img src={'./HoverSearch.png'}></img> : <img src={'./Search.png'}></img>}
               </span>
-              <input ref={this.setWrapperRef} onKeyUp={this.handleChange} onClick={this.handleClickInside} type="text" placeholder="search" className="search" ></input>
+              <input tabIndex="1" ref={this.setWrapperRef} onKeyUp={this.handleChange} onClick={this.handleClickInside} type="text" placeholder="search" className="search" ></input>
             </div>
           </form>
           <SearchResults searchClicked={this.state.searchClicked} query={this.state.query} results={this.state.results} suggestionOptions={this.state.suggestionOptions} />
