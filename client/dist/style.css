@@ -388,6 +388,7 @@ body {
 .inspired {
   font-weight: bold; 
   cursor: none;
+  color: #26262c;
 }
 .category-link:hover {
   color: #167a92;

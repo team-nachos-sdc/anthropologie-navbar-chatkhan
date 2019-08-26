@@ -2,7 +2,7 @@
 
 .suggestions-box {
   overflow: hidden;
-  width: 800px;
+  width: 777px;
   height: 370px;
   display: flex;
   position: fixed;
@@ -10,13 +10,12 @@
   border: 1px solid #ccc;
   opacity: 80%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
-
 }
 .trending {
   width: 275px;
   margin: 0;
-  padding-left: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: 0;
   vertical-align: baseline;
   position: relative;
@@ -26,21 +25,32 @@
   bottom: 0;
   left: 0;
   z-index: 10040;
-  overflow: auto;
-  overflow-y: auto;
+
 }
 .tiny {
   position: absolute;
-
+  margin-left: -12.6%;
 }
-.trending h3 {
-  /* margin-bottom: 20px; */
-  margin-bottom: 10px;
+
+.trend-h {
+  margin-bottom: 20px;
+  font: 0.9rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  color: #2d2d31;
+  border-bottom: 1px solid #ccc;
+  display: block;
+  font-size: 0.6em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.popular-h {
+  margin-bottom: 20px;
   font: 0.9rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
   letter-spacing: .06rem;
   color: #26262c;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
   display: block;
   font-size: 0.6em;
@@ -50,11 +60,9 @@
   margin-inline-end: 0px;
 }
 .trend {
-flex-flow: column-reverse;
+  flex-flow: column-reverse;
   list-style: none;
   font: 0.7rem "Avenir LT W02 45 Book",sans-serif;
-  letter-spacing: .06rem;
-  text-decoration: none;
   margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -62,7 +70,6 @@ flex-flow: column-reverse;
   margin-right: 10px;
   text-overflow: ellipsis;
   display: inline-block;
-  overflow: scroll;
   max-width: calc(100vw - 40px);
   letter-spacing: .06rem;
   text-decoration: none;
@@ -83,48 +90,103 @@ flex-flow: column-reverse;
   background: url(/static/2.36.0/images/global/icons/icon-search.svg);
   background-repeat: no-repeat;
 }
-.popular-products h3 {
-  /* margin-bottom: 20px; */
-  margin-bottom: 10px;
-  font: 0.9rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
-  letter-spacing: .06rem;
-  color: #26262c;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ccc;
-  display: block;
-  font-size: 0.6em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
+
 .trending img {
   padding-left: 20px;
+  padding-right: 400px;
+
 
 }
 .popular-products {
   display: inline-block;
-  width: 525px;
-  padding-top: 20px;
-  border-left: 1px solid #f2f0eb;
-  padding: 0 10px 20px;
+  width: 520px;
+  border-left: 1px solid #ccc;
   margin: 0;
   padding: 0;
-  border: 0;
-  vertical-align: baseline;
   margin-bottom: 0;
-  padding: 0 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  vertical-align: baseline;
+  position: relative;
+  top: 10px;
+  left: 0;
 }
-.popular-products span {
+.popular {
+  flex-wrap: wrap;
+  float: left;
+  width: min-content;
+  text-align: left;
+}
+
+.title {
   position: relative;
   font: 0.8rem/1.6 "Avenir LT W02 65 Medium",sans-serif;
   padding: 5px;
 }
 
-.popular-products img {
+.result-img {
   display: inline-flex;
   width: 155px;
   height: 230px;
   padding: 5px;
+}
+
+.suggestion {
+  padding: 5px 30px 2px;
+  margin-bottom: 0;
+  font: 0.8rem/0.1 "Avenir LT W02 45 Book",sans-serif;
+  letter-spacing: .06rem;
+  text-decoration: none;
+  color: #26262c;
+  width: 100%;
+  display: inline-block;
+  line-height: 1.3;
+}
+
+.suggestions-box-searched {
+  overflow: hidden;
+  width: 828px;
+  height: 420px;
+  display: flex;
+  position: fixed;
+  background: #fdfdf9;
+  border: 1px solid #ccc;
+  opacity: 80%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#results-container {
+  width: 320px;
+  margin: 0;
+  border: 0;
+  vertical-align: baseline;
+  position: relative;
+  display: wrap-flex;
+  bottom: 0;
+  left: 0;
+  z-index: 10040;
+  /* overflow: auto;
+  overflow-y: auto; */
+}
+.trending-searched {
+  width: 340px;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 40px;
+  border: 0;
+  vertical-align: baseline;
+  position: relative;
+  display: wrap-flex;
+  top: 10px;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 10040;
+  /* overflow: auto;
+  overflow-y: auto; */
+}
+
+.tiny-searched {
+  position: absolute;
+  margin-left: -4.6%;
 }

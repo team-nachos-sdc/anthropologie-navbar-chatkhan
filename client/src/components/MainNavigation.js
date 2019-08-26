@@ -1,6 +1,4 @@
 import React from 'react';
-// import NavCategories from './NavCategories.js';
-
 
 const MainNavigation = (props) => {
 
