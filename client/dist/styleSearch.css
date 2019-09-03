@@ -1,6 +1,7 @@
 /**** SearchResults ****/
 
 .suggestions-box {
+  z-index: 10;
   overflow: hidden;
   width: 777px;
   height: 370px;
@@ -24,12 +25,12 @@
   right: 100px;
   bottom: 0;
   left: 0;
-  z-index: 10040;
+  z-index: 1;
 
 }
 .tiny {
   position: absolute;
-  margin-left: -12.6%;
+  margin-left: -13%;
 }
 
 .trend-h {
@@ -102,13 +103,12 @@
   width: 520px;
   border-left: 1px solid #ccc;
   margin: 0;
-  padding: 0;
+  padding-top: 10px;
   margin-bottom: 0;
   padding-left: 20px;
   padding-right: 20px;
   vertical-align: baseline;
   position: relative;
-  top: 10px;
   left: 0;
 }
 .popular {
@@ -134,7 +134,7 @@
 .suggestion {
   padding: 5px 30px 2px;
   margin-bottom: 0;
-  font: 0.8rem/0.1 "Avenir LT W02 45 Book",sans-serif;
+  font: 0.7rem/0.1 "Avenir LT W02 45 Book",sans-serif;
   letter-spacing: .06rem;
   text-decoration: none;
   color: #26262c;
@@ -153,6 +153,7 @@
   border: 1px solid #ccc;
   opacity: 80%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
 }
 
 #results-container {
@@ -164,7 +165,7 @@
   display: wrap-flex;
   bottom: 0;
   left: 0;
-  z-index: 10040;
+  z-index: 1;
   /* overflow: auto;
   overflow-y: auto; */
 }
@@ -181,7 +182,7 @@
   right: 100px;
   bottom: 0;
   left: 0;
-  z-index: 10040;
+  z-index: 1;
   /* overflow: auto;
   overflow-y: auto; */
 }
@@ -189,4 +190,84 @@
 .tiny-searched {
   position: absolute;
   margin-left: -4.6%;
+}
+
+/**** Language ****/
+
+.dropdown-language {
+  position: relative;
+  display: inline-block;
+}
+
+.language-dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 190px;
+  height: auto;
+  background: #fdfdf9;
+  border: 1px solid #ccc;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.dropdown-content-column {
+  padding: 12px;
+  width: 50%;
+  float: left;
+  height: auto;
+}
+
+.other-option {
+  padding: 6px;
+  color: #2d2d31;
+  margin-bottom: 20px;
+  font: 0.6rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  font-size: 0.5em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-decoration: none;
+}
+
+.language-title {
+  padding: 6px;
+  color: #2d2d31;
+  margin-bottom: 20px;
+  font: 0.6rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  font-size: 0.5em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-decoration: none;
+}
+
+.chosen-option {
+  padding: 6px;
+  color: #167a92;
+  margin-bottom: 20px;
+  font: 0.6rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  font-size: 0.5em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-decoration: none;
+} 
+
+.chosen-option .other-option{
+  cursor: pointer;
+}
+
+.other-option:hover {
+  color: #167a92;
+}
+
+.dropdown-language:hover .language-dropdown-content {
+  display: flex;
 }

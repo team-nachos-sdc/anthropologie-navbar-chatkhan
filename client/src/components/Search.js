@@ -41,7 +41,7 @@ export default class Search extends Component {
 
   handleClickOutside(event) {
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      this.setState({ searchClicked: false });
+      this.setState({ searchClicked: false }, () => this.setState({ query: '' }));
     }
   }
 
@@ -92,15 +92,26 @@ export default class Search extends Component {
   getResults() {
     axios.get('/search')
       .then(response => {
-        // console.log("response", response)
+        console.log("response", response)
         let arr = [];
+        let uniqueImages = [];
         for (var i = 0; i < response.data.length; i++) {
           if (response.data[i].title.includes(this.state.query) || response.data[i].color.includes(this.state.query)) {
             arr.push(response.data[i])
           }
         }
-        arr = arr.slice(0, 3)
-        this.setState({ results: arr }, () => console.log(this.state))
+        if (arr.length !== 0) {
+          console.log(arr)
+          arr = Object.values(arr.reduce((acc, curr) => {
+            if (!acc[curr.image1]) {
+              acc[curr.image1] = curr;
+            }
+            return acc;
+          }, {})
+          );
+          arr = arr.slice(0, 3)
+          this.setState({ results: arr }, () => console.log(this.state))
+        }
       })
       .catch(error => {
         console.log(error);
@@ -116,7 +127,7 @@ export default class Search extends Component {
               <span onMouseOut={this.mouseOut} onMouseOver={this.mouseOver}>
                 {this.state.moused ? <img src={'./HoverSearch.png'}></img> : <img src={'./Search.png'}></img>}
               </span>
-              <input tabIndex="1" ref={this.setWrapperRef} onKeyUp={this.handleChange} onClick={this.handleClickInside} type="text" placeholder="search" className="search" ></input>
+              <input tabIndex="1" value={this.state.query} ref={this.setWrapperRef} onChange={this.handleChange} onClick={this.handleClickInside} type="text" placeholder="search" className="search" ></input>
             </div>
           </form>
           <SearchResults searchClicked={this.state.searchClicked} query={this.state.query} results={this.state.results} suggestionOptions={this.state.suggestionOptions} trending={this.state.trending} />

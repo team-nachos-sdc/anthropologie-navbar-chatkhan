@@ -20,7 +20,6 @@ export default class SiteHeader extends Component {
   mouseOutDropdown() {
     this.setState({ dropMoused: false });
   }
-
   mouseOverDropdown() {
     this.setState({ dropMoused: true });
   }
@@ -34,25 +33,35 @@ export default class SiteHeader extends Component {
 
   render() {
     return (
-      <div className="header-container">
-        <Search />
-        <img id="brand" src={"./brand.png"} />
-        <span id="right-header">
-          <a href="#" className="header-link">registry</a>
-          <a href="#" className="header-link" onMouseOut={this.mouseOutDropdown} onMouseOver={this.mouseOverDropdown}>usd: english</a>
-          {/* <div className="language-dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div> */}
-          <span >
-            {this.state.dropMoused ? <img className="dropdownTriangle" src={'./Triangle.png'}></img> : <img className="dropdownTriangle" src={'./DownTriangle.png'}></img>}
+      <div>
+        <div className="header-container">
+          <Search />
+          <img id="brand" src={"./brand.png"} />
+          <span id="right-header">
+            <a href="#" className="header-link">registry</a>
+            <span className="dropdown-language">
+              <a href="#" className="header-link" onMouseOut={this.mouseOutDropdown} onMouseOver={this.mouseOverDropdown}>usd: english</a>
+              <span >
+                {this.state.dropMoused ? <img className="dropdownTriangle" src={'./Triangle.png'}></img> : <img className="dropdownTriangle" src={'./DownTriangle.png'}></img>}
+              </span>
+              <div className="language-dropdown-content">
+                <div className="dropdown-content-column">
+                  <div className="language-title" >Currency</div>
+                  <div className="chosen-option" >USD</div>
+                </div>
+                <div className="dropdown-content-column">
+                  <div className="language-title" >Language</div>
+                  <div className="chosen-option" >English</div>
+                  <div className="other-option" >French</div>
+                </div>
+              </div>
+            </span>
+            <a href="#" className="header-link">sign in / sign up </a>
+            <span onMouseOut={this.mouseOutBag} onMouseOver={this.mouseOverBag}>
+              {this.state.bagMoused ? <img className="shoppingBag" src={'./HoverBag.png'}></img> : <img className="shoppingBag" src={'./Bag.png'}></img>}
+            </span>
           </span>
-          <a href="#" className="header-link">sign in / sign up </a>
-          <span onMouseOut={this.mouseOutBag} onMouseOver={this.mouseOverBag}>
-            {this.state.bagMoused ? <img className="shoppingBag" src={'./HoverBag.png'}></img> : <img className="shoppingBag" src={'./Bag.png'}></img>}
-          </span>
-        </span>
+        </div>
       </div>
     )
   }
