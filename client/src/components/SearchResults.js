@@ -22,7 +22,10 @@ export default class SearchResults extends Component {
     this.state = {
       image1: false,
       image2: false,
-      image3: false
+      image3: false,
+      popular1: false,
+      popular2: false,
+      popular3: false,
     }
     this.mouseOutImage = this.mouseOutImage.bind(this);
     this.mouseOverImage = this.mouseOverImage.bind(this);
@@ -55,12 +58,13 @@ export default class SearchResults extends Component {
           <div className="popular-products">
             <h3 className="popular-h">Popular Products</h3>
             <div className="popular">
-              <img className="result-img" src={popular[0].image1}></img>
-              <div className="title"> {popular[0].title}</div></div>
-            <div className="popular"><img className="result-img" src={popular[1].image1}></img>
-              <div className="title"> {popular[1].title}</div></div>
-            <div className="popular"><img className="result-img" src={popular[2].image1}></img>
-              <div className="title"> {popular[2].title}</div></div>
+              {this.state.popular1 ? <img className="result-img" name="popular1" src={'./popular4.webp'} onMouseOut={this.mouseOutImage} onMouseOver={this.mouseOverImage}></img> : <img className="result-img" name="popular1" src={'./popular3.webp'} onMouseOut={this.mouseOutImage} onMouseOver={this.mouseOverImage}></img>}
+              <div className="title">Dickens Trousers</div></div>
+            <div className="popular">
+              {this.state.popular2 ? <img className="result-img" name="popular2" src={'./popular2.webp'} onMouseOut={this.mouseOutImage} onMouseOver={this.mouseOverImage}></img> : <img className="result-img" name="popular2" src={'./popular1.webp'} onMouseOut={this.mouseOutImage} onMouseOver={this.mouseOverImage}></img>}
+              <div className="title">Euphrates Dyed Tunic Dress</div></div>
+            <div className="popular"><img className="result-img" src={'./popular5.webp'}></img>
+              <div className="title">Wallace Cane and Oak Sideboard</div></div>
           </div>
         </div>
       )
