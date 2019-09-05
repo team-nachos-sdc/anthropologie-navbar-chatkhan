@@ -9,16 +9,26 @@ export default class App extends Component {
     super(props);
     this.state = {
 
+
     }
+
   }
   render() {
     return (
-      <div id="body">
-        <PromoHeader />
-        <SiteHeader />
-        <MainNavigation />
-        
-  </div>
+      <div>
+        <div id="body">
+          <PromoHeader />
+          <div id="full-topbar">
+            <SiteHeader />
+            <br></br>
+            <MainNavigation />
+          </div>
+          <br></br>
+        </div>
+        <div>
+          {/* <img src={'./HoverSearch.png'}> </img> */}
+        </div>
+      </div>
     )
   }
 }

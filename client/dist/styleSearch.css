@@ -1,0 +1,477 @@
+/**** SearchResults ****/
+
+.suggestions-box {
+  z-index: 10;
+  overflow: hidden;
+  width: 777px;
+  height: 370px;
+  display: flex;
+  position: fixed;
+  background: #fdfdf9;
+  border: 1px solid #ccc;
+  opacity: 80%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.trending {
+  width: 275px;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 0;
+  vertical-align: baseline;
+  position: relative;
+  display: wrap-flex;
+  top: 10px;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+}
+.tiny {
+  position: absolute;
+  margin-left: -13%;
+}
+
+.trend-h {
+  margin-bottom: 20px;
+  font: 0.9rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  color: #2d2d31;
+  border-bottom: 1px solid #ccc;
+  display: block;
+  font-size: 0.6em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.popular-h {
+  margin-bottom: 20px;
+  font: 0.9rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  color: #26262c;
+  border-bottom: 1px solid #ccc;
+  display: block;
+  font-size: 0.6em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.trend {
+  flex-flow: column-reverse;
+  list-style: none;
+  font: 0.7rem "Avenir LT W02 45 Book",sans-serif;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  align-items: center;
+  margin-right: 10px;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: calc(100vw - 40px);
+  letter-spacing: .06rem;
+  text-decoration: none;
+  color: #25262c;
+  cursor: pointer;
+}
+
+.trend:hover {
+  color: #167a92;
+}
+
+.trend:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  background: url(/static/2.36.0/images/global/icons/icon-search.svg);
+  background-repeat: no-repeat;
+}
+
+.trending img {
+  padding-left: 20px;
+  padding-right: 400px;
+
+
+}
+.popular-products {
+  display: inline-block;
+  width: 520px;
+  border-left: 1px solid #ccc;
+  margin: 0;
+  padding-top: 10px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  vertical-align: baseline;
+  position: relative;
+  left: 0;
+}
+.popular {
+  flex-wrap: wrap;
+  float: left;
+  width: min-content;
+  text-align: left;
+  cursor: pointer;
+}
+
+.title {
+  position: relative;
+  font: 0.8rem/1.6 "Avenir LT W02 65 Medium",sans-serif;
+  padding: 5px;
+}
+
+.result-img {
+  display: inline-flex;
+  width: 155px;
+  height: 230px;
+  padding: 5px;
+}
+
+.suggestion {
+  padding: 5px 30px 2px;
+  margin-bottom: 0;
+  font: 0.7rem/0.1 "Avenir LT W02 45 Book",sans-serif;
+  letter-spacing: .06rem;
+  text-decoration: none;
+  color: #26262c;
+  width: 100%;
+  display: inline-block;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  color: #167a92;
+}
+
+.suggestions-box-searched {
+  overflow: hidden;
+  width: 828px;
+  height: 420px;
+  display: flex;
+  position: fixed;
+  background: #fdfdf9;
+  border: 1px solid #ccc;
+  opacity: 80%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+#results-container {
+  width: 320px;
+  margin: 0;
+  border: 0;
+  vertical-align: baseline;
+  position: relative;
+  display: wrap-flex;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  /* overflow: auto;
+  overflow-y: auto; */
+}
+.trending-searched {
+  width: 340px;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 40px;
+  border: 0;
+  vertical-align: baseline;
+  position: relative;
+  display: wrap-flex;
+  top: 10px;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  /* overflow: auto;
+  overflow-y: auto; */
+}
+
+.tiny-searched {
+  position: absolute;
+  margin-left: -4.6%;
+}
+
+/**** Language ****/
+
+.dropdown-language {
+  position: relative;
+  display: inline-block;
+}
+
+.language-dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 190px;
+  height: auto;
+  background: #fdfdf9;
+  border: 1px solid #ccc;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.dropdown-content-column {
+  padding: 12px;
+  width: 50%;
+  float: left;
+  height: auto;
+}
+
+.other-option {
+  padding: 6px;
+  color: #2d2d31;
+  margin-bottom: 20px;
+  font: 0.6rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  font-size: 0.5em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.language-title {
+  padding: 6px;
+  color: #2d2d31;
+  margin-bottom: 20px;
+  font: 0.6rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  font-size: 0.5em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-decoration: none;
+}
+
+.chosen-option {
+  padding: 6px;
+  color: #167a92;
+  margin-bottom: 20px;
+  font: 0.6rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  font-size: 0.5em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+.chosen-option .other-option{
+  cursor: pointer;
+}
+
+.other-option:hover {
+  color: #167a92;
+}
+
+.dropdown-language:hover .language-dropdown-content {
+  display: flex;
+}
+
+
+
+
+/**** Login ****/
+/* #grayout {
+  filter: alpha(opacity=50);
+}
+
+* html #grayout {
+  position: absolute;
+}
+#grayout {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 9999;
+} */
+
+.X {
+  float: right;
+  position: relative;
+  top: -40px;
+  right: -28px;
+  cursor: pointer;
+}
+.fullscreen-container {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(90, 90, 90, 0.3);
+  z-index: 9999;
+}
+.login-modal {
+  position: fixed;
+  z-index: 10000;
+  background: #fdfdf9;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  top: 10%;
+  left: 32.2%;
+  min-height: initial;
+  height: auto;
+  max-height: 90%;
+  margin: auto 0;
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 450px;
+}
+
+.sign-in {
+  padding-top: 15px;
+  margin-top: 40px;
+  font: 1.3rem/1.3 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .11rem;
+  color: #26262c;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #939395;
+  padding: 0 30px 5px;
+  text-align: center;
+}
+
+.sign-up {
+  font: 1.3rem/1.3 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .11rem;
+  color: #26262c;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-top: 1px solid #939395;
+  padding: 0 30px 5px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.login-input-label {
+  margin-bottom: 20px;
+  font: 0.8rem/1.3 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .11rem;
+  text-transform: uppercase;
+  color: #26262c;
+}
+
+.login-input-box {
+width: 100%;
+padding: 10px;
+margin-bottom: 0;
+border: 1px solid #939395;
+border-radius: 0;
+color: #26262c;
+font: 0.9rem/1.4 "Avenir LT W02 65 Medium",sans-serif;
+letter-spacing: .06rem;
+-webkit-appearance: none;
+}
+
+.psw {
+  text-decoration: none;
+  color: #167a92;
+  display: inline-block;
+  margin-bottom: 15px;
+  font: 0.8rem/1 "Avenir LT W02 45 Book",sans-serif;
+}
+
+#sumbit-container {
+  padding-top: 25px;
+
+}
+.psw:hover {
+  text-decoration: underline;
+}
+
+#cancel:hover {
+  text-decoration: underline;
+}
+
+#submit {
+display: inline-block;
+  width: 68%;
+  margin-bottom: 20px;
+  padding: 14px 10px 13px;
+  border: 1px solid #4b5666;
+  border-radius: 0;
+  font: 0.8rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .24rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #4b5666;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 200ms ease-in-out,border-color 200ms ease-in-out;
+}
+
+#cancel {
+  padding-left: 45px;
+  display: inline-block;
+  color: #4b5666;
+  font: 0.8rem/1 "Avenir LT W02 45 Book",sans-serif;
+  letter-spacing: .06rem;
+  border: none;
+  border-radius: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  background: 0 0;
+  -webkit-appearance: none;
+  margin: 15px 20px 20px 0;
+  text-decoration: none;
+  color: #167a92;
+}
+#create-account:hover {
+  color: #fff;
+  background: #4b5666;
+}
+
+#create-account {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 14px 10px 13px;
+  border: 1px solid #4b5666;
+  border-radius: 0;
+  font: 0.8rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .24rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #4b5666;
+  background: #fdfdf9;
+  transition: background-color 200ms ease-in-out,border-color 200ms ease-in-out;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#submit:hover {
+  color: #4b5666;
+  background: #fdfdf9;
+  }
+  
+.login-container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}  
