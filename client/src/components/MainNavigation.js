@@ -31,7 +31,7 @@ const MainNavigation = (props) => {
                     <p className="category-link">Kids & Babies</p>
                   </div>
                   <div className="column" >
-                    <img className="nav-img" src={'./Sale.jpg'}></img>
+                    <img className="nav-img" src={'./images/Sale.jpg'}></img>
                   </div>
                 </div>
               </div>
@@ -72,7 +72,7 @@ const MainNavigation = (props) => {
                     <p className="category-link">Top-Rated</p>
                   </div>
                   <div className="column" >
-                    <img className="nav-img" src={'./Sale.jpg'}></img>
+                    <img className="nav-img" src={'./images/Sale.jpg'}></img>
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const MainNavigation = (props) => {
                     <p className="category-link">Plus Swimwear</p>
                   </div>
                   <div className="column" >
-                    <img className="nav-img" src={'./Plus.jpg'}></img>
+                    <img className="nav-img" src={'./images/Plus.jpg'}></img>
                   </div>
                 </div>
               </div>
@@ -199,7 +199,7 @@ const MainNavigation = (props) => {
                     <p className="category-link">Top-Rated</p>
                   </div>
                   <div className="column" >
-                    <img className="nav-img" src={'./Home.jpg'}></img>
+                    <img className="nav-img" src={'./images/Home.jpg'}></img>
                   </div>
                 </div>
               </div>
@@ -261,7 +261,7 @@ const MainNavigation = (props) => {
                     <p className="category-link">Petites</p>
                   </div>
                   <div className="column" >
-                    <img className="nav-img" src={'./Sale.jpg'}></img>
+                    <img className="nav-img" src={'./images/Sale.jpg'}></img>
                   </div>
                 </div>
               </div>

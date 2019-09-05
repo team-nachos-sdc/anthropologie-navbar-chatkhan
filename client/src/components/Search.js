@@ -125,7 +125,7 @@ export default class Search extends Component {
           <form action="/action_page.php" >
             <div className="search-wrapper">
               <span onMouseOut={this.mouseOut} onMouseOver={this.mouseOver}>
-                {this.state.moused ? <img src={'./HoverSearch.png'}></img> : <img src={'./Search.png'}></img>}
+                {this.state.moused ? <img src={'./images/HoverSearch.png'}></img> : <img src={'./images/Search.png'}></img>}
               </span>
               <input tabIndex="1" value={this.state.query} ref={this.setWrapperRef} onChange={this.handleChange} onClick={this.handleClickInside} type="text" placeholder="search" className="search" ></input>
             </div>

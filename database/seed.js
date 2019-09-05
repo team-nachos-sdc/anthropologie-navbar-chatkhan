@@ -3,9 +3,9 @@ const Product = require('./index.js');
 const colors = ['white', 'Coral', 'Sass', 'Sassima', 'Salt', 'Forest', 'Citron', 'Chiffon', 'Bone', 'Porcelain', 'Mustard', 'Egg Shell', 'Lace', 'Pearl', 'Canary', 'Daffofil', 'Honey', 'Marigold', 'Honey', 'Currant']
 const names = ['Robin', 'Brigitte', 'Massima', 'Saiorse', 'Astrid', 'Leslie', 'Gisella', 'Vega', 'Anastasia', 'Finley', 'Marnita', 'Faithfull', 'Diane', 'Rossi', 'Roxie', 'Boswell', 'Katrina', 'Kantha', 'Sophie', 'Makura', 'Helena', 'Adelina', 'Rivulets', 'Dahlia', 'Coren', 'Joanna', 'Edna', 'Majorelle', 'Tasmin', 'Martina', 'Vineet Bahl', 'Meguro']
 
-const skirtImages = ['./skirt1.webp', './skirt2.webp', './skirt3.webp', './skirt4.webp', './skirt5.webp', './skirt6.webp'];
-const whiteImages = ['./white1.webp', './white2.webp', './white3.webp', './white4.webp', './white5.webp', './white6.webp'];
-const shirtImages = ['./shirt1.webp', './shirt2.webp', './shirt3.webp', './shirt4.webp', './shirt5.jpeg', './shirt6.jpeg'];
+const skirtImages = ['./images/skirt1.webp', './images/skirt2.webp', './images/skirt3.webp', './images/skirt4.webp', './images/skirt5.webp', './images/skirt6.webp'];
+const whiteImages = ['./images/white1.webp', './images/white2.webp', './images/white3.webp', './images/white4.webp', './images/white5.webp', './images/white6.webp'];
+const shirtImages = ['./images/shirt1.webp', './images/shirt2.webp', './images/shirt3.webp', './images/shirt4.webp', './images/shirt5.jpeg', './images/shirt6.jpeg'];
 
 const skirts = {
   category: ['Maxi Skirt', 'Midi Skirt', 'Mini Skirt', 'A-Line Skirt'],
