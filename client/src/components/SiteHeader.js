@@ -87,13 +87,13 @@ export default class SiteHeader extends Component {
                 </div>
               </div>
             </span>
-            <a href="#" className="header-link" onClick={this.handleClickInside} >sign in / sign up </a>
+            <a href="#" className="header-link" onClick={this.handleClickInside} >sign in / sign up</a>
             <span onMouseOut={this.mouseOutBag} onMouseOver={this.mouseOverBag}>
               {this.state.bagMoused ? <img className="shoppingBag" src={'./images/HoverBag.png'}></img> : <img className="shoppingBag" src={'./images/Bag.png'}></img>}
             </span>
           </span>
         </div>
-        <Login loginClicked={this.state.loginClicked} handleXClick={this.handleXClick} handleClickOutside={this.handleClickOutside}/>
+        <Login loginClicked={this.state.loginClicked} handleXClick={this.handleXClick} handleClickOutside={this.handleClickOutside} />
       </div>
     )
   }
