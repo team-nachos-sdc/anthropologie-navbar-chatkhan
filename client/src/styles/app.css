@@ -1,3 +1,420 @@
+* {
+  position: static;
+}
+body {
+  font: 1.3rem/1 "Avenir LT W02 45 Book",sans-serif;
+  color: #5c5c5f;
+  background: #fdfdf9;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  list-style: none;
+}
+/**** PromoHeader ****/
+.promo-pre-title {
+  vertical-align: middle;
+  font: italic 0.8rem/2 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .12rem;
+  text-decoration: none;
+  padding: 0 17.5px;
+
+}
+.promo-container {
+  background-color: #f17960;
+  text-align: center;
+  margin: 0;
+  padding-top: 0;
+  border: 0;
+
+}
+.promo-title {
+  /* display: block; */
+  vertical-align: middle;
+  font: 1.0rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .12rem;
+  padding: 0 17.5px;
+  
+}
+.promo-links {
+  padding: 0 17.5px;
+  
+}
+
+.promo-link {
+  letter-spacing: .06rem;
+  text-decoration: underline;
+  padding: 0 17.5px;
+  vertical-align: middle;
+  font: 0.7rem/2 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .12rem;
+  color: inherit;
+  line-height: 24px;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+.promo-link:hover { 
+  color: #C00F16;
+  cursor: pointer;
+  text-decoration: none;
+}
+.promo-banner {
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header-container {
+  max-width: 1441px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 14px;
+  position: static;
+  justify-content: space-around;
+}
+/**** SiteHeader ****/
+#brand {
+  padding-top: 10px;
+  align-content: center;
+  padding-left: 100px;
+  cursor: pointer;
+}
+
+#right-header {
+  width: 25%;
+  justify-content: flex-start;
+  padding-left: 270px;
+  margin: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.header-link {
+  text-decoration: none;
+  padding: 0 7px;
+  vertical-align: middle;
+  font: 0.7rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .10rem;
+  color: #25262c;
+}
+.full-topbar {
+  position: static; 
+}
+.header-link:hover { 
+  color: #167a92;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdownTriangle {
+  padding-top: 4px;
+  vertical-align: baseline;
+
+}
+
+.shoppingBag {
+  padding-top: 4px;
+  vertical-align: baseline;
+
+}
+
+/**** Search ****/
+.search-container {
+  display: inline-block;
+  width: 33.33333%;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-right: 10px;
+}
+
+.search {
+  border-bottom: 1px solid #c9c0b5;
+  background-color: #fdfdf9;
+  margin-left: 60px;
+  padding: 7px 30px 0 0;
+  font: 0.8rem/1.6 "Avenir LT W02 65 Medium",sans-serif;
+  color: #167a92;
+  letter-spacing: .06rem;
+  vertical-align: middle;
+  transition: width .2s ease-in-out;
+  width: 180px;
+  border: none;
+}
+.search:focus {
+border-color: #059fb0;
+}
+.search-wrapper {
+  position: relative;
+}
+
+.search-wrapper img {
+  position: absolute;
+  top: 0px;
+  padding-left: 32px;
+}
+
+input {
+    /* color: #167a92; */
+  /* -webkit-writing-mode: horizontal-tb !important; */
+  text-rendering: auto;
+  color: #167a92;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+}
+
+/**** MainNavigation ****/
+/* .nav {
+  overflow: hidden;
+} */
+
+ul li {
+  display: inline;
+  text-align: center;
+}
+
+.category {
+  text-decoration: none;
+  color: #26262c;
+  font: 0.8rem/1.5 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .06rem;
+  padding: 0 15px 10px;
+  vertical-align: baseline;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+  position:static;
+}
+
+/* #one #two #three #four #five #six #seven #eight #nine #ten #eleven #twelve {
+  position: absolute;
+} */
+.one:hover ~ hr {
+  margin-left: 1.3%;
+  background: #167a92;
+
+}
+.two:hover ~ hr {
+  margin-left: 7%;
+  background: #167a92;
+
+}
+
+.three:hover ~ hr {
+  margin-left: 13.5%;
+  background: #167a92;
+
+}
+
+.four:hover ~ hr {
+  margin-left: 19%;
+  background: #167a92;
+
+}
+.five:hover ~ hr {
+  margin-left: 24.1%;
+  background: #167a92;
+
+}
+
+.six:hover ~ hr {
+  margin-left: 31.1%;
+  background: #167a92;
+
+}
+
+.seven:hover ~ hr {
+  margin-left: 41.6%;
+  background: #167a92;
+
+}
+.eight:hover ~ hr {
+  margin-left: 52.75%;
+  background: #167a92;
+
+}
+
+.nine:hover ~ hr {
+  margin-left: 63%;
+  background: #167a92;
+
+}
+
+.ten:hover ~ hr {
+  margin-left: 69.7%;
+  background: #167a92;
+
+}
+
+.eleven:hover ~ hr {
+  margin-left: 77.5%;
+  background: #167a92;
+
+}
+
+.twelve:hover ~ hr {
+  margin-left: 86.25%;
+  background: #167a92;
+}
+
+hr {
+  height: .07rem;
+  width: 2%;
+  margin: 0;
+  background: transparent;
+  border: none;
+  transition: .3s ease-in-out;
+}
+
+/**** Categories ****/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.nav-img {
+  display: inline-block;
+  /* max-width: 100%; */
+  height: 180px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  padding-right: 25px;
+  padding-top: 25px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 100px;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #ccc;
+  top: -21px;
+  position: relative;
+}
+
+.navbar .category-link {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.category-link:hover {
+  color: #167a92;
+}
+
+.dropdown-content {
+  display: none;
+  top: 180px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* z-index: 1; */
+}
+
+.dropdown-content .header {
+  padding: 16px;
+  color: #fdfdf9;
+}
+
+.dropdown {
+  background-color: #fdfdf9;
+  /* opacity: 70%; */
+  z-index: 1000;
+  overflow-y:inherit !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: inherit;
+  height: auto;
+}
+.category-container {
+  padding-left: 140px;
+  padding-right: 40px;
+  display: flex;
+  /* opacity: 70%; */
+}
+.column3 {
+  float: left;
+  width: 27.33333%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: inherit;
+  height: auto;
+}
+.category-container3 {
+  padding-left: 200px;
+  padding-right: 50px;
+  display: flex;
+  /* opacity: 70%; */
+}
+.column .category-link  {
+  float: none;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font: 0.7rem/1 "Avenir LT W02 65 Medium",sans-serif;
+  letter-spacing: .10rem;
+  color: #25262c;
+}
+/* .category-border {
+  width: 1px;
+  height: 40px;
+  border-left: #5c5c5f
+} */
+.inspired {
+  font-weight: bold; 
+  cursor: none;
+  color: #26262c;
+}
+.category-link:hover {
+  color: #167a92;
+  cursor: pointer;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+
 /**** SearchResults ****/
 
 .suggestions-box {
@@ -389,6 +806,7 @@ letter-spacing: .06rem;
   display: inline-block;
   margin-bottom: 15px;
   font: 0.8rem/1 "Avenir LT W02 45 Book",sans-serif;
+  cursor: pointer;
 }
 
 #sumbit-container {

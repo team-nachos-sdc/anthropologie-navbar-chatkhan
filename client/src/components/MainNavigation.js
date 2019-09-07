@@ -8,7 +8,7 @@ const MainNavigation = (props) => {
         <ul>
           <li className="one">
             <span className="dropdown">
-              <a className="category" href="#">New!</a>
+              <a className="category" >New!</a>
               <div className="dropdown-content">
                 <div className="category-container">
                   <div className="column" >
@@ -38,11 +38,11 @@ const MainNavigation = (props) => {
             </span>
           </li>
 
-          <li className="two"><a className="category" href="#">Dresses</a></li>
+          <li className="two"><a className="category" >Dresses</a></li>
 
           <li className="three">
             <span className="dropdown">
-              <a className="category" href="#">Clothing</a>
+              <a className="category" >Clothing</a>
               <div className="dropdown-content">
                 <div className="category-container">
                   <div className="column" >
@@ -80,7 +80,7 @@ const MainNavigation = (props) => {
           </li>
           <li className="four">
             <span className="dropdown">
-              <a className="category" href="#">Plus</a>
+              <a className="category" >Plus</a>
               <div className="dropdown-content">
                 <div className="category-container">
                   <div className="column" >
@@ -113,7 +113,7 @@ const MainNavigation = (props) => {
           </li>
           <li className="five">
             <span className="dropdown">
-              <a className="category" href="#">Shoes</a>
+              <a className="category" >Shoes</a>
               <div className="dropdown-content">
                 <div className="category-container3">
                   <div className="column column3" >
@@ -139,7 +139,7 @@ const MainNavigation = (props) => {
           </li>
           <li className="six">
             <span className="dropdown">
-              <a className="category" href="#">Accessories</a>
+              <a className="category" >Accessories</a>
               <div className="dropdown-content">
                 <div className="category-container3">
                   <div className="column column3" >
@@ -161,18 +161,18 @@ const MainNavigation = (props) => {
                     <p className="category-link">Top-Rated</p>
                   </div>
                   {/* <div className="column category-border" >
-                  <p className="category-link inspired">Get Inspired</p>
-                  <p className="category-link">The August Collection: Shoes</p>
-                  <p className="category-link">The August Collection: Accessories</p>
-                  <p className="category-link">The Animal-Inspired Shop</p>
-                </div> */}
+                    <p className="category-link inspired">Get Inspired</p>
+                    <p className="category-link">The August Collection: Shoes</p>
+                    <p className="category-link">The August Collection: Accessories</p>
+                    <p className="category-link">The Animal-Inspired Shop</p>
+                  </div> */}
                 </div>
               </div>
             </span>
           </li>
           <li className="seven">
             <span className="dropdown">
-              <a className="category" href="#">Home & Furniture</a>
+              <a className="category" >Home & Furniture</a>
               <div className="dropdown-content">
                 <div className="category-container">
                   <div className="column" >
@@ -207,7 +207,7 @@ const MainNavigation = (props) => {
           </li>
           <li className="eight">
             <span className="dropdown">
-              <a className="category" href="#">Beauty & Wellness</a>
+              <a className="category" >Beauty & Wellness</a>
               <div className="dropdown-content">
                 <div className="category-container3">
                   <div className="column column3" >
@@ -242,7 +242,7 @@ const MainNavigation = (props) => {
           </li>
           <li className="nine">
             <span className="dropdown">
-              <a className="category" href="#">30% Off Sale</a>
+              <a className="category" >30% Off Sale</a>
               <div className="dropdown-content">
                 <div className="category-container">
                   <div className="column" >
@@ -269,7 +269,7 @@ const MainNavigation = (props) => {
           </li>
           <li className="ten">
             <span className="dropdown">
-              <a className="category" href="#">Gifts</a>
+              <a className="category" >Gifts</a>
               <div className="dropdown-content">
                 <div className="category-container3">
                   <div className="column column3" >
@@ -299,15 +299,15 @@ const MainNavigation = (props) => {
             </span>
           </li>
 
-          <li className="eleven"><a className="category" href="#">BHLDN Weddings</a></li>
+          <li className="eleven"><a className="category" >BHLDN Weddings</a></li>
 
-          <li className="twelve"><a className="category" href="#">Terrain</a></li>
+          <li className="twelve"><a className="category" >Terrain</a></li>
 
           <hr />
         </ul>
       </div>
       <div className="bottom-border">
-    </div >
+      </div >
     </div >
   )
 }

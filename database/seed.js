@@ -80,7 +80,6 @@ const createProducts = (func) => {
       productsArr[i].image2 = shirtImages[index + 1]
     }
   }
-  console.log(productsArr)
   return productsArr;
 }
 

@@ -69,9 +69,9 @@ export default class SiteHeader extends Component {
           <Search />
           <img id="brand" src={"./images/brand.png"} />
           <span id="right-header">
-            <a href="#" className="header-link">registry</a>
+            <a className="header-link">registry</a>
             <span className="dropdown-language">
-              <a href="#" className="header-link" onMouseOut={this.mouseOutDropdown} onMouseOver={this.mouseOverDropdown}>usd: english</a>
+              <a className="header-link" onMouseOut={this.mouseOutDropdown} onMouseOver={this.mouseOverDropdown}>usd: english</a>
               <span >
                 {this.state.dropMoused ? <img className="dropdownTriangle" src={'./images/Triangle.png'}></img> : <img className="dropdownTriangle" src={'./images/DownTriangle.png'}></img>}
               </span>
@@ -87,7 +87,7 @@ export default class SiteHeader extends Component {
                 </div>
               </div>
             </span>
-            <a href="#" className="header-link" onClick={this.handleClickInside} >sign in / sign up</a>
+            <a className="header-link" onClick={this.handleClickInside} >sign in / sign up</a>
             <span onMouseOut={this.mouseOutBag} onMouseOver={this.mouseOverBag}>
               {this.state.bagMoused ? <img className="shoppingBag" src={'./images/HoverBag.png'}></img> : <img className="shoppingBag" src={'./images/Bag.png'}></img>}
             </span>

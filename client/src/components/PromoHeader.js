@@ -8,9 +8,9 @@ const PromoHeader = (props) => {
         <span className="promo-title" > EXTRA 30% OFF SALE ITEMS </span>
         <span>
           <div className="promo-links">
-            <a href="#" className="promo-link">shop sale clothing</a>
-            <a href="#" className="promo-link">shop sale home</a>
-            <a href="#" className="promo-link">details</a>
+            <a className="promo-link">shop sale clothing</a>
+            <a className="promo-link">shop sale home</a>
+            <a className="promo-link">details</a>
           </div>
         </span>
       </div>

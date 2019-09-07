@@ -92,16 +92,13 @@ export default class Search extends Component {
   getResults() {
     axios.get('/search')
       .then(response => {
-        console.log("response", response)
         let arr = [];
-        let uniqueImages = [];
         for (var i = 0; i < response.data.length; i++) {
           if (response.data[i].title.includes(this.state.query) || response.data[i].color.includes(this.state.query)) {
             arr.push(response.data[i])
           }
         }
         if (arr.length !== 0) {
-          console.log(arr)
           arr = Object.values(arr.reduce((acc, curr) => {
             if (!acc[curr.image1]) {
               acc[curr.image1] = curr;
@@ -110,7 +107,7 @@ export default class Search extends Component {
           }, {})
           );
           arr = arr.slice(0, 3)
-          this.setState({ results: arr }, () => console.log(this.state))
+          this.setState({ results: arr })
         }
       })
       .catch(error => {
