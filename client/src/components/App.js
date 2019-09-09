@@ -19,12 +19,16 @@ export default class App extends Component {
         <div id="body">
           <PromoHeader />
           <div id="full-topbar">
-            <SiteHeader />
+            <div id="content">
+
+              <SiteHeader />
+              <br></br>
+              <MainNavigation />
+            </div>
             <br></br>
-            <MainNavigation />
           </div>
-          <br></br>
         </div>
+
         <div>
           {/* <img src={'./HoverSearch.png'}> </img> */}
         </div>

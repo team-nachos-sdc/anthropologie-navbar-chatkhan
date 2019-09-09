@@ -26,7 +26,7 @@
   margin: 0;
   padding-top: 0;
   border: 0;
-
+  /* display: flex; */
 }
 .promo-title {
   /* display: block; */
@@ -74,6 +74,7 @@
   padding-top: 14px;
   position: static;
   justify-content: space-around;
+  overflow: hidden;
 }
 /**** SiteHeader ****/
 #brand {
@@ -100,9 +101,35 @@
   letter-spacing: .10rem;
   color: #25262c;
 }
-.full-topbar {
-  position: static; 
+#full-topbar {
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+  z-index: 22;
+  border-bottom: 10px solid #ccc;
 }
+
+#content {
+  position: fixed;
+  width: 100%;
+  z-index: 22;
+  background-color: #fdfdf9;
+  border-bottom: 1px solid #ccc;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/* #full-topbar + #content {
+  margin: 0;
+  padding: 0;
+} */
+
 .header-link:hover { 
   color: #167a92;
   cursor: pointer;
@@ -134,7 +161,7 @@
   border-bottom: 1px solid #c9c0b5;
   background-color: #fdfdf9;
   margin-left: 80px;
-  padding: 7px 30px 0 0;
+  padding: 7px 30px 5px 5px;
   font: 0.8rem/1.6 "Avenir LT W02 65 Medium",sans-serif;
   color: #167a92;
   letter-spacing: .06rem;
@@ -303,13 +330,6 @@ body {
   margin-left: 20%;
 }
 
-.bottom-border {
-  border-bottom: 1px solid #ccc;
-  top: -2px;
-  position: relative;
-  z-index: 21;
-}
-
 .navbar .category-link {
   float: left;
   font-size: 16px;
@@ -325,14 +345,13 @@ body {
 
 .dropdown-content {
   display: none;
-  top: 150px;
+  top: 104px;
   position: absolute;
   width: 100%;
   left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 20;
-  background-color: #fdfdf9;
-
+  background-color: rgba(253,253,249, .93);
 }
 
 .dropdown-content .header {
@@ -341,14 +360,20 @@ body {
 }
 
 .dropdown {
-  background-color: #fdfdf9;
+  /* background-color: #fdfdf9; */
+  /* background-color: rgba(253,253,249, .6); */
   /* opacity: 70%; */
   z-index: 1000;
   overflow-y:inherit !important;
 }
 
 .dropdown:hover .dropdown-content {
+  transition: all .3s linear;
   display: block;
+  -webkit-transition:height 200ms ease-in;
+  -moz-transition:height 200ms ease-in;
+  -o-transition:height 200ms ease-in;
+  transition:height 200ms ease-in;
 }
 
 .column {
@@ -428,7 +453,6 @@ body {
   position: fixed;
   background: #fdfdf9;
   border: 1px solid #ccc;
-  opacity: 80%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .trending {
@@ -579,7 +603,6 @@ body {
   position: fixed;
   background: #fdfdf9;
   border: 1px solid #ccc;
-  opacity: 80%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 22;
 }
@@ -624,9 +647,10 @@ body {
 /**** Language ****/
 
 .dropdown-language {
-  position: relative;
+  position: initial;
   display: inline-block;
-  z-index: 22;
+  z-index: 25;
+  background-color: #fdfdf9;
 }
 
 .language-dropdown-content {
@@ -898,3 +922,9 @@ display: inline-block;
   padding-top: 15px;
   padding-bottom: 15px;
 }  
+
+.bottom-img {
+  width:100%;
+  height:auto;
+  margin-top: 40px;
+}
