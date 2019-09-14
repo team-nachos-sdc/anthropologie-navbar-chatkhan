@@ -6,6 +6,13 @@ const getProducts = (req, res) => {
     .catch(err => res.status(400).send(err))
 }
 
+const getAProduct = (req, res) => {
+  let { query } = req;
+  Product.findOne(query)
+  .then(data => res.status(200).send(data))
+  .catch((err) => res.status(400).send(err))
+}
+
 const postProduct = (req, res) => {
   let { color, category, title, image1, image2 } = req.body;
   Product.create({color, category, title, image1, image2})
@@ -29,6 +36,7 @@ const deleteProduct = (req, res) => {
 }
 
 module.exports = {getProducts,
+ getAProduct,
  postProduct,
  updateProduct,
  deleteProduct}

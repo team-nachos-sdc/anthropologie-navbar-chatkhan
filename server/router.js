@@ -1,5 +1,6 @@
 const router = require('express').Router()
-const {getProducts, 
+const {getProducts,
+  getAProduct, 
   postProduct, 
   updateProduct, 
   deleteProduct } = require('./controller.js');
@@ -11,5 +12,9 @@ router
   .post(postProduct)
   .put(updateProduct)
   .delete(deleteProduct)
+
+router
+  .route('/find')
+  .get(getAProduct)
 
 module.exports = router;
