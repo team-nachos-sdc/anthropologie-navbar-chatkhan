@@ -83,7 +83,7 @@ const createProducts = (func) => {
   return productsArr;
 }
 
-const insertData = function () {
+const insertData = async function () {
   let data = createProducts(createSkirt);
   data = data.concat(createProducts(createDress));
   data = data.concat(createProducts(createShirt));
@@ -91,4 +91,15 @@ const insertData = function () {
   Product.insertMany(data);
 }
 
-insertData()
+insertData();
+
+// const millionEntries = function() {
+//   for (var i = 0; i < 400; i++) {
+//   insertData()
+//   .then(() => insertData()
+//   .then(() => insertData()
+//   .then(() => insertData())))
+//   }
+// }
+
+// millionEntries();
