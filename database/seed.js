@@ -1,4 +1,5 @@
 const Product = require('./index.js');
+const fs = require('fs');
 
 const colors = ['white', 'Coral', 'Sass', 'Sassima', 'Salt', 'Forest', 'Citron', 'Chiffon', 'Bone', 'Porcelain', 'Mustard', 'Egg Shell', 'Lace', 'Pearl', 'Canary', 'Daffofil', 'Honey', 'Marigold', 'Honey', 'Currant']
 const names = ['Robin', 'Brigitte', 'Massima', 'Saiorse', 'Astrid', 'Leslie', 'Gisella', 'Vega', 'Anastasia', 'Finley', 'Marnita', 'Faithfull', 'Diane', 'Rossi', 'Roxie', 'Boswell', 'Katrina', 'Kantha', 'Sophie', 'Makura', 'Helena', 'Adelina', 'Rivulets', 'Dahlia', 'Coren', 'Joanna', 'Edna', 'Majorelle', 'Tasmin', 'Martina', 'Vineet Bahl', 'Meguro']
@@ -83,23 +84,58 @@ const createProducts = (func) => {
   return productsArr;
 }
 
-const insertData = async function () {
+const insertData = function () {
   let data = createProducts(createSkirt);
   data = data.concat(createProducts(createDress));
   data = data.concat(createProducts(createShirt));
   data = data.concat(createProducts(createBedding));
-  Product.insertMany(data);
+  // Product.insertMany(data);
+  return data;
 }
 
-insertData();
+var wstream = fs.createWriteStream('massData.json');
 
-// const millionEntries = function() {
-//   for (var i = 0; i < 400; i++) {
-//   insertData()
-//   .then(() => insertData()
-//   .then(() => insertData()
-//   .then(() => insertData())))
+function writeOneMillionTimes(writer, data, encoding, callback) {
+  var i = 100000;
+  write();
+  function write() {
+    var ok = true;
+    do {
+      i -= 1;
+      if (i === 0) {
+        var setData = JSON.stringify(data());
+        // last time!
+        console.log('This is the last write!!!');
+        writer.write(setData, encoding, callback);
+      } else {
+        // see if we should continue, or wait
+        // don't pass the callback, because we're not done yet.
+        var setData = JSON.stringify(data());
+        ok = writer.write(setData, encoding);
+      }
+    } while (i > 0 && ok);
+    if (i > 0) {
+      // had to stop early!
+      // write some more once it drains
+      writer.once('drain', write);
+    }
+  }
+}
+writeOneMillionTimes(wstream, insertData, 'utf8', function(err, result) {
+    if (err) {
+      console.log('error', err);
+    } else {
+      console.log(result);
+    }
+})
+
+// const productString = JSON.stringify(insertData());
+
+// fs.writeFile("massData.json", productString, function(err, result) {
+//   if (err) {
+//     console.log('error', err)
+//   } else {
+//     console.log('first write', result);
+
 //   }
-// }
-
-// millionEntries();
+// })
