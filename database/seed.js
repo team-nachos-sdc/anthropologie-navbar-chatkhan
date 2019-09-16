@@ -62,7 +62,7 @@ const createBedding = () => {
 
 const createProducts = (func) => {
   let productsArr = [];
-  for (let i = 0; i < 25; i++) {
+  for (let i = 0; i < 1250000; i++) {
     productsArr.push(func())
   }
   for (var i = 0; i < productsArr.length; i++) {
@@ -90,13 +90,14 @@ const insertData = function () {
   data = data.concat(createProducts(createShirt));
   data = data.concat(createProducts(createBedding));
   // Product.insertMany(data);
+  console.log(data.length);
   return data;
 }
 
 var wstream = fs.createWriteStream('massData.json');
 
 function writeOneMillionTimes(writer, data, encoding, callback) {
-  var i = 100000;
+  var i = 1;
   write();
   function write() {
     var ok = true;
