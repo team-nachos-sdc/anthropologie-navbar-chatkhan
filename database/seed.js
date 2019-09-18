@@ -28,42 +28,63 @@ const beddings = {
   adj: ['Faux Fur', 'Sheer', 'Velvet', 'Hand-Stitched', 'Linen', 'Silk', 'Bardot', 'Fringe', 'Tasseled', 'Ruched', 'Ikat', 'Jersey']
 }
 
-const createSkirt = () => {
+const createSkirt = (index) => {
   let skirt = {};
+  skirt.id = index;
   skirt.category = skirts.category[Math.floor(Math.random() * Math.floor(skirts.category.length))];
   skirt.color = colors[Math.floor(Math.random() * Math.floor(colors.length))];
   skirt.title = `${names[Math.floor(Math.random() * Math.floor(names.length))]} ${skirts.adj[Math.floor(Math.random() * Math.floor(skirts.adj.length))]} ${skirt.category}`;
   return skirt;
 }
 
-const createDress = () => {
+const createDress = (index) => {
   let dress = {};
+  dress.id = index;
   dress.category = dresses.category[Math.floor(Math.random() * Math.floor(dresses.category.length))];
   dress.color = colors[Math.floor(Math.random() * Math.floor(colors.length))];
   dress.title = `${names[Math.floor(Math.random() * Math.floor(names.length))]} ${dresses.adj[Math.floor(Math.random() * Math.floor(dresses.adj.length))]} ${dress.category}`;
   return dress;
 }
 
-const createShirt = () => {
+const createShirt = (index) => {
   let shirt = {};
+  shirt.id = index;
   shirt.category = shirts.category[Math.floor(Math.random() * Math.floor(shirts.category.length))];
   shirt.color = colors[Math.floor(Math.random() * Math.floor(colors.length))];
   shirt.title = `${names[Math.floor(Math.random() * Math.floor(names.length))]} ${shirts.adj[Math.floor(Math.random() * Math.floor(shirts.adj.length))]} ${shirt.category} `;
   return shirt;
 }
 
-const createBedding = () => {
+const createBedding = (index) => {
   let bedding = {};
+  bedding.id = index;
   bedding.category = beddings.category[Math.floor(Math.random() * Math.floor(beddings.category.length))];
   bedding.color = colors[Math.floor(Math.random() * Math.floor(colors.length))];
   bedding.title = `${names[Math.floor(Math.random() * Math.floor(names.length))]} ${beddings.adj[Math.floor(Math.random() * Math.floor(beddings.adj.length))]} ${bedding.category} `;
   return bedding;
 }
 
-const createProducts = (func) => {
+const createProducts = (func, type) => {
   let productsArr = [];
-  for (let i = 0; i < 1250000; i++) {
-    productsArr.push(func())
+  if (type === 'skirt') {
+    for (let i = 5000001; i <= 6250000; i++) {
+      productsArr.push(func(i))
+    }
+  }
+  if (type === 'dress') {
+    for (let i = 6250001; i <= 7500000; i++) {
+      productsArr.push(func(i))
+    }
+  }
+  if (type === 'shirt') {
+    for (let i = 7500001; i <= 8750000; i++) {
+      productsArr.push(func(i))
+    }
+  }
+  if (type === 'bedding') {
+    for (let i = 8750001; i <= 10000000; i++) {
+      productsArr.push(func(i))
+    }
   }
   for (var i = 0; i < productsArr.length; i++) {
     if (productsArr[i].color === 'white') {
@@ -84,11 +105,29 @@ const createProducts = (func) => {
   return productsArr;
 }
 
+function ConvertToCSV(objArray) {
+  var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+  var str = '';
+
+  for (var i = 0; i < array.length; i++) {
+      var line = '';
+      for (var index in array[i]) {
+          if (line != '') line += ','
+
+          line += array[i][index];
+      }
+
+      str += line + '\r\n';
+  }
+
+  return str;
+};
+
 const insertData = function () {
-  let data = createProducts(createSkirt);
-  data = data.concat(createProducts(createDress));
-  data = data.concat(createProducts(createShirt));
-  data = data.concat(createProducts(createBedding));
+  let data = createProducts(createSkirt, 'skirt');
+  data = data.concat(createProducts(createDress, 'dress'));
+  data = data.concat(createProducts(createShirt, 'shirt'));
+  data = data.concat(createProducts(createBedding, 'bedding'));
   // Product.insertMany(data);
   console.log(data.length);
   return data;
