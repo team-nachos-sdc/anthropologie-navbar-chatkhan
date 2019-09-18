@@ -8,6 +8,7 @@ db.once('open', function () {
 });
 
 const productSchema = new mongoose.Schema({
+  id: Number,
   category: String,
   color: String,
   title: String,

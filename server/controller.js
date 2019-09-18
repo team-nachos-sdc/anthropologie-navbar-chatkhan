@@ -7,7 +7,7 @@ const getProducts = (req, res) => {
 }
 
 const getAProduct = (req, res) => {
-  let { query } = req;
+  let { query } = req
   Product.findOne(query)
   .then(data => res.status(200).send(data))
   .catch((err) => res.status(400).send(err))
