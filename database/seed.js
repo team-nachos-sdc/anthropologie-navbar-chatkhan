@@ -67,22 +67,22 @@ const createBedding = (index) => {
 const createProducts = (func, type) => {
   let productsArr = [];
   if (type === 'skirt') {
-    for (let i = 5000001; i <= 6250000; i++) {
+    for (let i = 7500001; i <= 8125000; i++) {
       productsArr.push(func(i))
     }
   }
   if (type === 'dress') {
-    for (let i = 6250001; i <= 7500000; i++) {
+    for (let i = 8125001; i <= 8750000; i++) {
       productsArr.push(func(i))
     }
   }
   if (type === 'shirt') {
-    for (let i = 7500001; i <= 8750000; i++) {
+    for (let i = 8750001; i <= 9375000; i++) {
       productsArr.push(func(i))
     }
   }
   if (type === 'bedding') {
-    for (let i = 8750001; i <= 10000000; i++) {
+    for (let i = 9375001; i <= 10000000; i++) {
       productsArr.push(func(i))
     }
   }
@@ -133,7 +133,7 @@ const insertData = function () {
   return data;
 }
 
-var wstream = fs.createWriteStream('massData.json');
+var wstream = fs.createWriteStream('massData.csv');
 
 function writeOneMillionTimes(writer, data, encoding, callback) {
   var i = 1;
@@ -144,6 +144,7 @@ function writeOneMillionTimes(writer, data, encoding, callback) {
       i -= 1;
       if (i === 0) {
         var setData = JSON.stringify(data());
+        setData = ConvertToCSV(setData);
         // last time!
         console.log('This is the last write!!!');
         writer.write(setData, encoding, callback);
@@ -151,6 +152,7 @@ function writeOneMillionTimes(writer, data, encoding, callback) {
         // see if we should continue, or wait
         // don't pass the callback, because we're not done yet.
         var setData = JSON.stringify(data());
+        setData = ConvertToCSV(setData);
         ok = writer.write(setData, encoding);
       }
     } while (i > 0 && ok);
