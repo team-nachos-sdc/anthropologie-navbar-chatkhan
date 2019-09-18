@@ -10,7 +10,7 @@
   "scripts": {
     "start": "nodemon server",
     "build": "webpack -d -w",
-    "seed": "node --max-old-space-size=2048 database/seed.js"
+    "seed": "node --max-old-space-size=3072 database/seed.js"
   },
   "dependencies": {
     "axios": "^0.19.0",
