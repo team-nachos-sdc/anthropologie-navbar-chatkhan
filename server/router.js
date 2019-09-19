@@ -3,7 +3,11 @@ const {getProducts,
   getAProduct, 
   postProduct, 
   updateProduct, 
-  deleteProduct } = require('./controller.js');
+  deleteProduct,
+  getSqlProduct,
+  postSqlProduct,
+  updateSqlProduct,
+  deleteSqlProduct } = require('./controller.js');
 
 
 router
@@ -16,5 +20,12 @@ router
 router
   .route('/find')
   .get(getAProduct)
+
+router
+  .route('/posty')
+  .get(getSqlProduct)
+  .post(postSqlProduct)
+  .put(updateSqlProduct)
+  .delete(deleteSqlProduct)
 
 module.exports = router;
