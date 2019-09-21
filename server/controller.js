@@ -30,8 +30,8 @@ const updateProduct = (req, res) => {
 }
 
 const deleteProduct = (req, res) => {
-    let { color } = req.body;
-    Product.deleteOne({ color })
+    let { id } = req.body;
+    Product.deleteOne({ id })
     .then((data) => res.status(203).send('Successfully deleted!'))
     .catch((err) => res.status(403).send(err))
 }
