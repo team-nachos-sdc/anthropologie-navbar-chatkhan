@@ -67,22 +67,22 @@ const createBedding = (index) => {
 const createProducts = (func, type) => {
   let productsArr = [];
   if (type === 'skirt') {
-    for (let i = 7500001; i <= 8125000; i++) {
+    for (let i = 1; i <= 625000; i++) {
       productsArr.push(func(i))
     }
   }
   if (type === 'dress') {
-    for (let i = 8125001; i <= 8750000; i++) {
+    for (let i = 625001; i <= 1250000; i++) {
       productsArr.push(func(i))
     }
   }
   if (type === 'shirt') {
-    for (let i = 8750001; i <= 9375000; i++) {
+    for (let i = 1250001; i <= 1875000; i++) {
       productsArr.push(func(i))
     }
   }
   if (type === 'bedding') {
-    for (let i = 9375001; i <= 10000000; i++) {
+    for (let i = 1875001; i <= 2500000; i++) {
       productsArr.push(func(i))
     }
   }
@@ -133,7 +133,7 @@ const insertData = function () {
   return data;
 }
 
-var wstream = fs.createWriteStream('massData.csv');
+var wstream = fs.createWriteStream('massData3.csv');
 
 function writeOneMillionTimes(writer, data, encoding, callback) {
   var i = 1;
