@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const products = require('./postIndex.js');
 
-const Product = products.define('product', {
+const ProductPost = products.define('product', {
     id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -26,6 +26,8 @@ const Product = products.define('product', {
     timestamps: false
 });
 
-Product.sync({ force: true })
+ProductPost.sync()
     .then(() => console.log('Synced up to DB!'))
-    .catch(err => console.error('Unable to sync', err))
+    .catch((err) => console.log('Unable to connect', err))
+
+module.exports = ProductPost;
