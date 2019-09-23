@@ -65,3 +65,4 @@ testData.json
 .DS_Store
 .vscode/
 package-lock.json
+newrelic.js

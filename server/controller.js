@@ -1,6 +1,11 @@
 const Product = require('../database/index.js');
 const ProductPost = require('../database/postModel.js');
 
+var createRandomId = function() {
+    var randomId = Math.floor(Math.random() * 10000000);
+    return { id: randomId }
+}
+
 const getProducts = (req, res) => {
   Product.find()
     .then(data => res.status(200).send(data))
@@ -9,7 +14,7 @@ const getProducts = (req, res) => {
 
 const getAProduct = (req, res) => {
   let { query } = req
-  Product.findOne(query)
+  Product.findOne(createRandomId())
   .then(data => res.status(200).send(data))
   .catch((err) => res.status(400).send(err))
 }
@@ -37,9 +42,9 @@ const deleteProduct = (req, res) => {
 }
 
 const getSqlProduct = (req, res) => {
-    console.log(req.query);
-    let { query } = req
-    ProductPost.findAll({ where: query })
+    // console.log(req.query);
+    // let { query } = req
+    ProductPost.findAll({ where: createRandomId()})
     .then((data) => res.status(200).send(data))
     .catch((err) => res.status(400).send('Unable to get record from PostgreSQL', err))
 }
