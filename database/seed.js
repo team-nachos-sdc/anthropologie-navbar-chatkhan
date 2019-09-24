@@ -72,17 +72,17 @@ const createProducts = (func, type) => {
     }
   }
   if (type === 'dress') {
-    for (let i = 500001; i <= 100000; i++) {
+    for (let i = 500001; i <= 1000000; i++) {
       productsArr.push(func(i))
     }
   }
   if (type === 'shirt') {
-    for (let i = 100001; i <= 150000; i++) {
+    for (let i = 1000001; i <= 1500000; i++) {
       productsArr.push(func(i))
     }
   }
   if (type === 'bedding') {
-    for (let i = 150001; i <= 200000; i++) {
+    for (let i = 1500001; i <= 2000000; i++) {
       productsArr.push(func(i))
     }
   }
