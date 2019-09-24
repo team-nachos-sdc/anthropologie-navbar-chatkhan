@@ -133,7 +133,7 @@ const insertData = function () {
   return data;
 }
 
-var wstream = fs.createWriteStream('massData3.csv');
+var wstream = fs.createWriteStream('massData.json');
 
 function writeOneMillionTimes(writer, data, encoding, callback) {
   var i = 1;
@@ -144,7 +144,7 @@ function writeOneMillionTimes(writer, data, encoding, callback) {
       i -= 1;
       if (i === 0) {
         var setData = JSON.stringify(data());
-        setData = ConvertToCSV(setData);
+        // setData = ConvertToCSV(setData);
         // last time!
         console.log('This is the last write!!!');
         writer.write(setData, encoding, callback);
@@ -152,7 +152,7 @@ function writeOneMillionTimes(writer, data, encoding, callback) {
         // see if we should continue, or wait
         // don't pass the callback, because we're not done yet.
         var setData = JSON.stringify(data());
-        setData = ConvertToCSV(setData);
+        // setData = ConvertToCSV(setData);
         ok = writer.write(setData, encoding);
       }
     } while (i > 0 && ok);
