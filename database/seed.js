@@ -82,7 +82,7 @@ const createProducts = (func, type) => {
     }
   }
   if (type === 'bedding') {
-    for (let i = 937501; i <= 1g250000; i++) {
+    for (let i = 937501; i <= 1250000; i++) {
       productsArr.push(func(i))
     }
   }
