@@ -34,7 +34,7 @@
     "react-dom": "^16.9.0",
     "sequelize": "^5.18.4",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7",
+    "webpack-cli": "^3.3.12",
     "ws": "^7.1.2"
   },
   "devDependencies": {
